@@ -1,12 +1,12 @@
 import { useParams } from "react-router-dom";
-import { useFetch } from "../../hooks/useFetch";
+import { useEffect,useState } from "react";
 import React from 'react'
 
 function Recipe() {
 
-  const {id} =  useParams()
-  const url = 'http://localhost:3000/recipes/' + id
-  const { error, isPending, data:recipe} =  useFetch(url) 
+  const [data, setData] = useState(null)
+  const [isPending, setIsPending] = useState(false)
+  const [error, setError] = useState(null)
 
   return (
     <div>

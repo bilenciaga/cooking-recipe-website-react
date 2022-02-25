@@ -11,7 +11,7 @@ function RecipeList( {recipes} ) {
                 <p className='my-2 text-xl'>{recipe.cookingTime} to make.</p>
                 <div className='m-auto'>{recipe.method.substring(0, 150)}</div>
                 <Link to = {`/recipes/${recipe.id}`}>
-                    <button className=' bg-white border-2 border-red-300 p-2 rounded-lg mt-auto'>Cook This</button>
+                    <button className=' bg-white border-2 border-red-300 p-2 rounded-lg mt-3'>Cook This</button>
                 </Link>
 
                 
